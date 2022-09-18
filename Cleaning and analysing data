@@ -1,0 +1,40 @@
+This flow includes the work after having downloaded the kaggle dataset and connected the postgres application to the Tableau desktop application.
+The dataset link can be found from the readme file.
+
+We first create the table naming "world_population" by using the pgadmin interface.
+
+CREATE TABLE IF NOT EXISTS public."world_population"
+(
+    "Rank" integer primary key,
+    "CCA3" VARCHAR(50),
+    "Country" VARCHAR(50),
+    "Capital" VARCHAR(50),
+    "Continent" VARCHAR(50),
+    "2022_Population" integer,
+    "2020_Population" integer,
+    "2015_Population" integer,
+    "2010_Population" integer,
+    "2000_Population" integer,
+    "1990_Population" integer,
+    "1980_Population" integer,
+    "1970_Population" integer,
+    "Area_km2" integer,
+    "Density_per_km2" DECIMAL(10,4),
+    "Growth_Rate" DECIMAL(7,4),
+    "World_Population_Percentage" DECIMAL(5,2)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."world_population"
+    OWNER to postgres;
+    
+At this point, you can proceed to get the data from the file by choosing one among three options. I've chosen to get it with the copy function.
+If face any trouble with file reading authorisation, you need to grant authorisation to everyone for the relevant file that you download from the Kaggle.
+
+COPY public."world_population"("Rank","CCA3","Country","Capital","Continent","2022_Population","2020_Population","2015_Population","2010_Population","2000_Population","1990_Population","1980_Population","1970_Population","Area_km2","Density_per_km2","Growth_Rate","World_Population_Percentage") 
+FROM 'C:\Users\90537\Downloads\world_population.csv' 
+DELIMITER ',' 
+CSV HEADER;
+
+
