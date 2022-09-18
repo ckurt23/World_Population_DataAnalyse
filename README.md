@@ -8,5 +8,6 @@ Visualisation source link:
 
 Open topics:
 *************Bir iki analiz kodu ekle (70'den günümüze kıta total)
+*************Some important insight from the data doldur
 *************Tableau part
 *************Kod görselinin renklendirilmesi
