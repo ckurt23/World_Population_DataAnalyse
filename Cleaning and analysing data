@@ -150,7 +150,8 @@ LIMIT 5;
 
 
 -----------------------------
-Some important insight into the data:
+Some important insight from the data:
+-----------------------------
     - There are total of 234 countries and no missing values for any of fields in the table.
     - The list has information for 6 different continents.
     - There are 8 different columns showing the population number from different years between this period (1970 - 2022).
