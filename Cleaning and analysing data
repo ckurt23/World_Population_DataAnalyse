@@ -146,7 +146,12 @@ ORDER BY "gap_by_rate" DESC
 LIMIT 5;
 
 -----------------------------
-****************70'den günümüze kıta total
+/* The continent total population for each time period */
+
+SELECT "Continent", SUM("1970_Population") AS "1970_total", SUM("1980_Population") AS "1980_total", SUM("1990_Population") AS "1990_total", SUM("2000_Population") AS "2000_total", SUM("2010_Population") AS "2010_total", SUM("2015_Population") AS "2015_total", SUM("2020_Population") AS "2020_total", SUM("2022_Population") AS "2022_total"
+FROM world_population2
+GROUP BY "Continent"
+ORDER BY "2022_total" DESC;
 
 
 -----------------------------
@@ -155,7 +160,10 @@ Some important insight from the data:
     - There are total of 234 countries and no missing values for any of fields in the table.
     - The list has information for 6 different continents.
     - There are 8 different columns showing the population number from different years between this period (1970 - 2022).
-    - Rank numbers stand for the current population number.
+    - Asia is always at the first place among other continents regarding the total population number.
+    - 5 of the all first 10 most crowded countries are from Asia.
+    - United Arab Emirates' population is currently 30 times bigger than its number in 1970, which is the biggest rate of increase among other countries.
+    - 
 
 ------------------------------------------------------------------
 3. Data Visualisation
