@@ -102,7 +102,7 @@ FROM world_population2
 GROUP BY "Continent"
 ORDER BY COUNT("Country") DESC;
 -----------------------------
-/* See which continent the most crowded countries are in. Half of them are located in Asia. */
+/* See which continent has the most crowded countries in. Half of them are located in Asia. */
 
 SELECT "Country", "2022_Population", "Continent"
 FROM world_population2
