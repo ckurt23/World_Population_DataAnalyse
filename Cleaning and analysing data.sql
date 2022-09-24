@@ -16,9 +16,8 @@ the growth rate and the total percentage of each country's population compared t
 We first create the table naming "world_population" by using the pgadmin interface.
 
 ------------------------------------------------------------------
-Data Import, Cleaning and Analysis
+2. Data Import, Cleaning and Analysis
 ------------------------------------------------------------------
-
 CREATE TABLE IF NOT EXISTS public."world_population"
 (
     "Rank" integer primary key,
