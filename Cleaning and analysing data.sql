@@ -1,9 +1,8 @@
 This flow includes the work after having downloaded the kaggle dataset and connected the postgres application to the Tableau desktop application.
 The dataset link can be found from the readme file.
 
-------------------------------------------------------------------
-1. Introduction
-------------------------------------------------------------------
+Introduction
+
 This dataset contains data about the total number of the population at different periods of time between 1970 and 2022.
 The table includes information about;
 the country name, 
@@ -15,9 +14,8 @@ the growth rate and the total percentage of each country's population compared t
 
 We first create the table naming "world_population" by using the pgadmin interface.
 
-------------------------------------------------------------------
-2. Data Import, Cleaning and Analysis
-------------------------------------------------------------------
+Data Import, Cleaning and Analysis
+
 CREATE TABLE IF NOT EXISTS public."world_population"
 (
     "Rank" integer primary key,
